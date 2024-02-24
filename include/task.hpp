@@ -59,7 +59,7 @@ public:
 			: coroutine_{coroutine} {}
 
 		// task_awaiter is ready if the coroutine is done or the coroutine is null.
-		bool auto await_ready() const noexcept
+		bool await_ready() const noexcept
 		{
 			return coroutine_ == nullptr || coroutine_.done();
 		}
@@ -137,7 +137,7 @@ public:
 	std::suspend_always initial_suspend() const noexcept { return {}; }
 
 	// return to the calling coroutine when task is completed
-	final_awaiter auto final_suspend() const noexcept { return final_awaiter{}; }
+	final_awaiter final_suspend() const noexcept { return final_awaiter{}; }
 
 	void unhandled_exception() const noexcept { std::terminate(); }
 
