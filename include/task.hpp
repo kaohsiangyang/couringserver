@@ -7,7 +7,7 @@
 #include <optional>
 #include <utility>
 
-namespace co_uring_http {
+namespace couringserver {
 template <typename T>
 class task_promise;
 
@@ -188,6 +188,6 @@ public:
 
 	void return_void() const noexcept {}
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

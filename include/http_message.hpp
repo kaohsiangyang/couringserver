@@ -5,7 +5,7 @@
 #include <tuple>
 #include <vector>
 
-namespace co_uring_http {
+namespace couringserver {
 
 class http_request
 {
@@ -27,5 +27,5 @@ public:
 	std::string serialize() const;
 };
 
-} // namespace co_uring_http
+} // namespace couringserver
 #endif

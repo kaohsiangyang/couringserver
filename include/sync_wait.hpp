@@ -8,7 +8,7 @@
 
 #include "task.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 template <typename T>
 class sync_wait_task_promise;
 
@@ -158,6 +158,6 @@ std::conditional_t<std::is_same_v<T, void>, void, std::vector<T>> sync_wait_all(
 		return return_value_list;
 	}
 }
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <utility>
 
-namespace co_uring_http
+namespace couringserver
 {
 file_descriptor::file_descriptor() = default;
 
@@ -118,4 +118,4 @@ file_descriptor open(const std::filesystem::path &path)
 	}
 	return file_descriptor{raw_file_descriptor};
 }
-} // namespace co_uring_http
+} // namespace couringserver

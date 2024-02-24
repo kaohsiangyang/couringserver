@@ -3,7 +3,7 @@
 
 #include <cstddef>
 
-namespace co_uring_http
+namespace couringserver
 {
 
     constexpr unsigned int SOCKET_LISTEN_QUEUE_SIZE = 512;
@@ -18,6 +18,6 @@ namespace co_uring_http
 
     constexpr size_t BUFFER_SIZE = 1024;
 
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

@@ -6,7 +6,7 @@
 
 #include "io_uring.hpp"
 
-namespace co_uring_http
+namespace couringserver
 {
 buffer_ring &buffer_ring::get_instance() noexcept
 {
@@ -46,4 +46,4 @@ void buffer_ring::return_buffer(const unsigned int buffer_id)
 	io_uring::get_instance().add_buffer(
 		buffer_ring_.get(), buffer_list_[buffer_id], buffer_id, buffer_list_.size());
 }
-} // namespace co_uring_http
+} // namespace couringserver

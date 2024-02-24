@@ -9,7 +9,7 @@
 
 #include "constant.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 io_uring::io_uring()
 {
 	if (const int result = io_uring_queue_init(IO_URING_QUEUE_SIZE, &io_uring_, 0); result != 0)
@@ -140,4 +140,4 @@ void io_uring::add_buffer(
 	io_uring_buf_ring_add(buffer_ring, buffer.data(), buffer.size(), buffer_id, mask, buffer_id);
 	io_uring_buf_ring_advance(buffer_ring, 1);
 }
-} // namespace co_uring_http
+} // namespace couringserver

@@ -9,7 +9,7 @@
 struct io_uring_buf_ring;
 struct io_uring_cqe;
 
-namespace co_uring_http {
+namespace couringserver {
 struct sqe_data
 {
 	void *coroutine = nullptr;
@@ -74,6 +74,6 @@ public:
 private:
 	::io_uring io_uring_;
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

@@ -12,7 +12,7 @@
 #include "io_uring.hpp"
 #include "task.hpp"
 
-namespace co_uring_http
+namespace couringserver
 {
 /**
  * @brief wrapper of file descriptor
@@ -75,6 +75,6 @@ std::tuple<file_descriptor, file_descriptor> pipe();
 // Open a file descriptor for a file.
 file_descriptor open(const std::filesystem::path &path);
 
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

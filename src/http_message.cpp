@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 
-namespace co_uring_http {
+namespace couringserver {
 std::string http_response::serialize() const
 {
 	std::stringstream raw_http_response;
@@ -15,4 +15,4 @@ std::string http_response::serialize() const
 	raw_http_response << "\r\n";
 	return raw_http_response.str();
 }
-} // namespace co_uring_http
+} // namespace couringserver

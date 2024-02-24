@@ -10,7 +10,7 @@
 #include <stop_token>
 #include <thread>
 
-namespace co_uring_http {
+namespace couringserver {
 class thread_pool
 {
 public:
@@ -44,6 +44,6 @@ private:
 	void thread_loop();
 	void enqueue(std::coroutine_handle<> coroutine);
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

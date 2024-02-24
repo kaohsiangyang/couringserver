@@ -11,7 +11,7 @@
 
 #include "constant.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 
 /**
  * @brief manage buffer ring
@@ -33,6 +33,6 @@ private:
 	std::vector<std::vector<char>> buffer_list_;
 	std::bitset<MAX_BUFFER_RING_SIZE> borrowed_buffer_set_;
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

@@ -24,7 +24,7 @@
 #include "socket.hpp"
 #include "sync_wait.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 thread_worker::thread_worker(const char *port)
 {
 	buffer_ring::get_instance().register_buffer_ring(BUFFER_RING_SIZE, BUFFER_SIZE);
@@ -69,8 +69,9 @@ task<> thread_worker::handle_client(client_socket client_socket)
 		if (const auto parse_result = http_parser.parse_packet(recv_buffer); parse_result.has_value())
 		{
 			const http_request &http_request = parse_result.value();
-			const std::filesystem::path file_path = std::filesystem::relative(http_request.url, "/");
+			// const std::filesystem::path file_path = std::filesystem::relative(http_request.url, "/");
 
+			const std::filesystem::path file_path = http_request.url;
 			http_response http_response;
 			http_response.version = http_request.version;
 			if (std::filesystem::exists(file_path) && std::filesystem::is_regular_file(file_path))
@@ -152,4 +153,4 @@ void http_server::listen(const char *port)
 	}
 	sync_wait_all(thread_worker_list);
 }
-} // namespace co_uring_http
+} // namespace couringserver

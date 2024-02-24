@@ -11,7 +11,7 @@
 
 #include "http_message.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 
 std::string_view trim_whitespace(std::string_view string)
 {
@@ -90,4 +90,4 @@ std::optional<http_request> http_parser::parse_packet(std::span<char> packet)
 	raw_http_request_.clear();
 	return http_request;
 }
-} // namespace co_uring_http
+} // namespace couringserver

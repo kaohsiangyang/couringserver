@@ -5,7 +5,7 @@
 #include <span>
 #include <string>
 
-namespace co_uring_http {
+namespace couringserver {
 class http_request;
 
 class http_parser
@@ -16,6 +16,6 @@ public:
 private:
 	std::string raw_http_request_;
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

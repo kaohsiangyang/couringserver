@@ -10,7 +10,7 @@
 #include "constant.hpp"
 #include "file_descriptor.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 server_socket::server_socket() = default;
 
 void server_socket::bind(const char *port)
@@ -190,4 +190,4 @@ task<ssize_t> client_socket::send(const std::span<char> &buffer, const size_t le
 	co_return bytes_sent;
 }
 
-} // namespace co_uring_http
+} // namespace couringserver

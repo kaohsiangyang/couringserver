@@ -1,6 +1,6 @@
 #include "thread_pool.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 thread_pool::thread_pool(const std::size_t thread_count)
 {
 	for (size_t _ = 0; _ < thread_count; ++_)
@@ -58,4 +58,4 @@ void thread_pool::enqueue(std::coroutine_handle<> coroutine)
 	coroutine_queue_.emplace(coroutine);
 	condition_variable_.notify_one();
 }
-} // namespace co_uring_http
+} // namespace couringserver

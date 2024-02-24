@@ -12,7 +12,7 @@
 #include "io_uring.hpp"
 #include "task.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 
 class server_socket : public file_descriptor
 {
@@ -89,6 +89,6 @@ public:
 	task<ssize_t> send(const std::span<char> &buffer, size_t length);
 };
 
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif

@@ -8,7 +8,7 @@
 #include "task.hpp"
 #include "thread_pool.hpp"
 
-namespace co_uring_http {
+namespace couringserver {
 class thread_worker
 {
 public:
@@ -34,6 +34,6 @@ public:
 private:
 	thread_pool thread_pool_;
 };
-} // namespace co_uring_http
+} // namespace couringserver
 
 #endif
